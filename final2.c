@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include<windows.h>
@@ -179,7 +179,7 @@ int main() {
     char mode;
     char playerMode;
     startsound (); // calling start sound function
-    printf("WELCOME TO THE ZOMBIE MAZE GAME! Here's a chance for you and your friend to compete to see who would reach the end first in a maze filled with zombies! Use W(up), S(down), A(left) and D(right) to move and OO to kill the zombies. REMEMBER: if a zombie kills you, or time runs out, YOU LOSE!!!\n");
+    printf("WELCOME TO THE ZOMBIE MAZE GAME!\n Here's a chance for you and your friend to compete to see who would reach the end first in a maze filled with zombies!\n Use W(up), S(down), A(left) and D(right) to move and OO to kill the zombies.\n REMEMBER: if a zombie kills you, or time runs out, GAME OVER \n");
      printf("Select game mode (1: Single Player, 2: Two Player): ");
     scanf(" %c", &playerMode);
     printf("Select game mode (E: Easy, H: Hard): ");
@@ -295,7 +295,7 @@ while (1) {
         if (result == -1) {
             // Player has died
             maze[playerY[player]][playerX[player]] = ' '; // Remove player character from the maze
-            printf("Player %c has died! Game over.\n", playerChar[player]);
+            printf("Player %c has died!  No wins .\n", playerChar[player]);
             endsound();
             return 0;
         }
